@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.validator.data.providers.AppData
 import app.validator.data.providers.AppDataProvider
+import app.validator.di.AnalyticsService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -25,7 +26,8 @@ data class DiceUiState(
 )
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val appDataProvider: AppDataProvider
+    private val analyticsService: AnalyticsService
+//    private val appDataProvider: AppDataProvider
 ):ViewModel() {
     val appsState = MutableStateFlow<List<AppData>>(emptyList())
     private val  title = MutableStateFlow("Title")
@@ -44,12 +46,12 @@ class HomeViewModel @Inject constructor(
     )
 
     init {
-        viewModelScope.launch {
-            appDataProvider.fetchInstalledAppList().collect{
-                appsState.emit(it)
-                Log.d("DEBUG_APP_",it.toString())
-            }
-        }
+//        viewModelScope.launch {
+//            appDataProvider.fetchInstalledAppList().collect{
+//                appsState.emit(it)
+//                Log.d("DEBUG_APP_",it.toString())
+//            }
+//        }
     }
 
     fun updateTitle(){
@@ -58,7 +60,11 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    fun getDataString():String{
-        return appDataProvider.testFunction()
+    fun isActive():Boolean{
+        return analyticsService.isActive()
     }
+
+//    fun getDataString():String{
+//        return appDataProvider.testFunction()
+//    }
 }

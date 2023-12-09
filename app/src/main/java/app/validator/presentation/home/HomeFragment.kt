@@ -28,7 +28,7 @@ class HomeFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("DEBUG_APP_FRAG",homeViewModel.getDataString())
+//        Log.d("DEBUG_APP_FRAG",homeViewModel.getDataString())
 
 //        val binding: FragmentHomeBinding? = activity?.let { DataBindingUtil.setContentView(it,R.layout.fragment_home) }
         binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -39,7 +39,7 @@ class HomeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ViewCompat.setTranslationZ(view,100f)
-        Log.d("DEBUG_APP_FRAG",homeViewModel.getDataString())
+//        Log.d("DEBUG_APP_FRAG",homeViewModel.getDataString())
         val navController = findNavController()
 
         binding?.lifecycleOwner = viewLifecycleOwner

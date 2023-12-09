@@ -31,7 +31,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         navController.navigate(R.id.action_testFragment_to_homeFragment)
+
+
     }
 
+
+    fun openSecondApp2():Boolean{
+        return analytics.isActive()
+    }
 
 }

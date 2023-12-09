@@ -65,6 +65,7 @@ dependencies {
     implementation("androidx.test.ext:junit-ktx:1.1.5")
     kapt(libs.com.dagger.compiler)
 
+    testImplementation("io.mockk:mockk:1.13.8")
     debugImplementation("androidx.fragment:fragment-testing:1.3.6")
     kaptTest("com.google.dagger:hilt-android-compiler:2.44")
     testImplementation("com.google.dagger:hilt-android-testing:2.44")
