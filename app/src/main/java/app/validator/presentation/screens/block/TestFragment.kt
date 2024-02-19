@@ -1,27 +1,20 @@
-package app.validator.presentation.home
+package app.validator.presentation.screens.block
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.ViewCompat
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import app.validator.R
-import app.validator.databinding.FragmentHomeBinding
-import app.validator.util.Inflate
-import dagger.hilt.android.AndroidEntryPoint
+import app.validator.databinding.FragmentTestBinding
+import app.validator.presentation.screens.home.HomeViewModel
 
-//@AndroidEntryPoint
-class HomeFragment: Fragment() {
-//    private val binding: FragmentHomeBinding by Inflate(R.layout.fragment_home)
-    private val homeViewModel:HomeViewModel by activityViewModels()
-    private var binding: FragmentHomeBinding? = null
-
+class TestFragment:Fragment(R.layout.fragment_test) {
+    private val homeViewModel: HomeViewModel by activityViewModels()
+    private var binding: FragmentTestBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +24,7 @@ class HomeFragment: Fragment() {
 //        Log.d("DEBUG_APP_FRAG",homeViewModel.getDataString())
 
 //        val binding: FragmentHomeBinding? = activity?.let { DataBindingUtil.setContentView(it,R.layout.fragment_home) }
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentTestBinding.inflate(inflater, container, false)
         return binding!!.root
         // Here we go -- the profile resource is shown to the UI
     }

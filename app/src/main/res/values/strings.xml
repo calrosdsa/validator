@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Validator</string>
+<!--    <string name="app_name">Validator</string>-->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank
     d asd asd mas kdmas kdask ,dask das
@@ -12,4 +12,22 @@
     También puedes usar transiciones para definir los efectos de entrada y de salida. Estas transiciones se pueden definir en archivos de recursos XML. Por ejemplo, quizás desees que el fragmento actual desaparezca en forma gradual y que el nuevo fragmento se deslice desde el borde derecho de la pantalla. Estas transiciones se pueden definir de la siguiente manera:
     También puedes usar transiciones para definir los efectos de entrada y de salida. Estas transiciones se pueden definir en archivos de recursos XML. Por ejemplo, quizás desees que el fragmento actual desaparezca en forma gradual y que el nuevo fragmento se deslice desde el borde derecho de la pantalla. Estas transiciones se pueden definir de la siguiente manera:
     </string>
+
+    <string name="app_name">Camera2Video</string>
+    <string name="capture">Capture</string>
+    <string name="error_file_not_found">Recorded file not found</string>
+    <string name="recorder_shutdown_error">Recording stops too fast, please press longer</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="name_user">Name\n</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone Number</string>
+    <string name="continuar">Continue</string>
+    <string name="user_data">User Data</string>
+    <string name="record_video">Record a Video</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="action_canceled">Action canceled</string>
+    <string name="unexpected_result">Unexpected result</string>
+    <string name="mission_permission">Missing permission</string>
+    <string name="menu">Menu</string>
+    <string name="set_up_camera">SetUp Camera</string>
 </resources>

@@ -5,6 +5,8 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.jetbrains.android) apply false
     alias(libs.plugins.dagger.hilt) apply false
+    alias(libs.plugins.safe.args) apply false
+
 //    id 'org.jetbrains.kotlin.android' version '1.8.20' apply false
 }
 

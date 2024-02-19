@@ -1,4 +1,4 @@
-package app.validator.presentation.home
+package app.validator.presentation.screens.home
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

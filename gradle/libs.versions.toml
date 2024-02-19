@@ -1,20 +1,22 @@
 [versions]
 ktx = "1.8.0"
 androidGradlePlugin = "8.0.2"
-jetbrainsVersion = "1.8.20"
+jetbrainsVersion = "1.9.22"
 appCompat = "1.6.1"
 androidMaterial = "1.5.0"
 contraintlayuot = "2.1.4"
-hilt = "2.44"
+hilt = "2.50"
 androidKtx = "1.7.2"
 navVersion = "2.5.3"
+
+compose = "1.5.9"
 
 [plugins]
 android-application = { id = "com.android.application" , version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 jetbrains-android = { id = "org.jetbrains.kotlin.android", version.ref = "jetbrainsVersion" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
-#safe-args = {id = "androidx.navigation",}:navigation-safe-args-gradle-plugin:2.7.5"
+safe-args = {id = "androidx.navigation.safeargs.kotlin", version.ref = "navVersion"}
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref =  "ktx"}
@@ -30,8 +32,26 @@ androidx-navigation-fragment = { group = "androidx.navigation", name = "navigati
 androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navVersion"}
 androidx-navigation-dynamic = { group = "androidx.navigation", name = "navigation-dynamic-features-fragment", version.ref = "navVersion"}
 
+androidx-compose-bom = "androidx.compose:compose-bom:2024.02.00"
+
 
 
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidKtx"}
 
 androidx-fragment = "androidx.fragment:fragment-ktx:1.6.2"
+
+#qrScanner
+#bundled:
+io-github-quickie ="io.github.g00fy2.quickie:quickie-bundled:1.9.0"
+#Equalizer
+com-github-bullheadandplato = "com.github.bullheadandplato:AndroidEqualizer:2.2"
+com-github-filepicker = "com.github.TutorialsAndroid:FilePicker:v8.0.19"
+
+
+com-retrofit-gson = "com.squareup.retrofit2:converter-gson:2.5.0"
+com-retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+com-google-exoplayer = "com.google.android.exoplayer:exoplayer:2.13.3"
+
+androidx-multidex = "androidx.multidex:multidex:2.0.1"
+com-github-glide = "com.github.bumptech.glide:glide:4.12.0"
+com-github-glide-compiler ="com.github.bumptech.glide:compiler:4.12.0"

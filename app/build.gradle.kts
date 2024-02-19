@@ -2,17 +2,18 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.android)
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.safe.args)
     kotlin("kapt")
 }
 
 android {
     namespace ="app.validator"
-    compileSdk =  33
+    compileSdk =  34
 
     defaultConfig {
         applicationId= "app.validator"
         minSdk= 23
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -39,6 +40,11 @@ android {
 
     buildFeatures {
         dataBinding = true
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.9"
     }
 }
 
@@ -56,9 +62,29 @@ dependencies {
 
     implementation(libs.androidx.activity.ktx)
 
+    //Compose
+    implementation(platform(libs.androidx.compose.bom))
+    implementation("androidx.compose.runtime:runtime:1.6.1")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.foundation:foundation")
+    // or only import the main APIs for the underlying toolkit systems,
+    // such as input and measurement/layout
+    implementation("androidx.compose.ui:ui")
+
+
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
     implementation(libs.androidx.navigation.dynamic)
+
+    implementation(libs.io.github.quickie)
+    implementation(libs.com.github.filepicker)
+    implementation(libs.com.github.bullheadandplato)
+    implementation(libs.com.retrofit)
+    implementation(libs.com.retrofit.gson)
+    implementation(libs.com.google.exoplayer)
+    implementation(libs.androidx.multidex)
+    implementation(libs.com.github.glide)
+    implementation(libs.com.github.glide.compiler)
 
 
     implementation(libs.com.dagger)

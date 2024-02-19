@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="app.validator.presentation.home.HomeFragment"
+        android:name="app.validator.presentation.screens.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        >
         <action
             android:id="@+id/action_homeFragment_to_testFragment"
             app:destination="@id/testFragment"
@@ -18,14 +18,30 @@
             app:popExitAnim="@anim/nav_slide_out_right"
             app:popEnterAnim="@anim/nav_slide_in_left"
             />
+        <action
+            android:id="@+id/action_homeFragment_to_setupCameraFragment"
+            app:destination="@id/setupCameraFragment"
+            app:enterAnim="@anim/nav_slide_in_right"
+            app:exitAnim="@anim/nav_slide_out_left"
+            app:popExitAnim="@anim/nav_slide_out_right"
+            app:popEnterAnim="@anim/nav_slide_in_left"
+            />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
-        android:name="app.validator.presentation.block.TestFragment"
+        android:name="app.validator.presentation.screens.block.TestFragment"
         android:label="fragment_test"
         tools:layout="@layout/fragment_test" >
         <action
             android:id="@+id/action_testFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupCameraFragment"
+        android:name="app.validator.presentation.screens.setupcamera.SetUpCameraFragment"
+        android:label="fragment_setupCamera"
+
+        >
+
     </fragment>
 </navigation>

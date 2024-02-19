@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.testing.FragmentScenario
 import androidx.fragment.app.testing.launchFragmentInContainer
 import app.validator.launchFragmentInHiltContainer
+import app.validator.presentation.screens.home.HomeFragment
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
 import org.junit.Before
